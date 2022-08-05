@@ -9,6 +9,6 @@ than create a new database and name it "robot_db"
 
 
 ## Interface
-![image](photo2.png)
+![image](photo3.png)
 
 
