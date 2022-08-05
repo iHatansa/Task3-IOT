@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GET</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+</head>
+
+<style>
+    #instructions{
+        color: #136f63;
+        font-size: 30px;
+    }
+
+    #save-btn
+    {
+
+        background-color: #003F91;
+        color: white;
+        border-radius: 90px;
+        border: none;
+        padding: 5px;
+        font-size: 24px;
+        height: 90px;
+        width: 90px;
+        box-shadow: 0 2px 3px darkslategray;
+        cursor: pointer;
+        transition: all 0.2s ease;
+    }
+    #save-btn:active{
+        color: black;
+        background-color: #5DA9E9;
+        box-shadow: 0 0 2px darkslategray;
+        transform: translateY(2px);
+    }
+
+    #header{
+        color: #136f63;
+        font-size: 40px;
+    }
+
+    body{
+        background: #E5F4E3;
+        font-family: 'Open Sans', sans-serif;
+        -webkit-font-smoothing: antialiased;
+        color:#393D3D;
+    }
+
+
+</style>
+<body>
+<div class = "container">
+    <h1 id="header" class = "text-center mt-5">
+        GET information and save it into the database
+    </h1>
+    <div class="panel-body">
+        <form action="connect.php" method="post">
+          <div class="form-group">
+            <label class = "text-center mt-5" for="direction">Direction of movement (Left, right, forward, backward)</label>
+            <input
+              type="text"
+              id="direction"
+              name="direction"
+            />
+    </div>
+    <div class="panel-body">
+        <div class="form-group">
+          <label class = "text-center mt-5" for="sensor">temperature sensor (any integer)</label>
+          <input
+            type="text"
+            id="sensor"
+            name="sensor"
+          />
+  </div>
+    <div class = "form-group" >
+        <button id = "save-btn" class = "btn btn-danger btn-block form-control text-center mt-5" style="display:block; margin: 10px auto;">
+            save
+        </button>
+    </form>
+
+    <p id = "instructions" class="text-center mt-5"> Press The Start Button To Run The Program</p>
+    </div>
+</div>
+
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="code.js"></script>
+</html>
